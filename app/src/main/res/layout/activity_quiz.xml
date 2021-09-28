@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz"
+    android:background="@drawable/background5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding = "16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:textColor="@color/colorBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Geography questions"
+            android:layout_centerHorizontal="true"
+            android:textSize="34sp" />
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/title">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="1. Which is the smallest country in the world? " />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/world_pic" />
+
+            <RadioGroup
+                android:paddingTop="5dp"
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monaco"
+                    android:textSize="25sp"/>
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vatican"
+                    android:textSize="25sp"/>
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nauru"
+                    android:textSize="25sp"/>
+            </RadioGroup>
+
+
+            <TextView
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="2. What is the capital of Canada? " />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/canada" />
+
+            <RadioGroup
+                android:paddingTop="5dp"
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ottawa"
+                    android:textSize="25sp"/>
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Montreal"
+                    android:textSize="25sp"/>
+                <RadioButton
+                    android:id="@+id/rb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toronto"
+                    android:textSize="25sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="@color/colorBlack"
+                android:text="3. In which city this building is located? " />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/london" />
+
+            <EditText
+                android:paddingTop="5dp"
+                android:textSize="25sp"
+                android:id="@+id/fourthQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type your answer here...." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textColor="@color/colorBlack"
+                android:text="4. Please select countries which is located in Europe. " />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/europe" />
+
+            <CheckBox
+                android:id="@+id/btn_checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Austria"
+                android:textSize="25sp"/>
+            <CheckBox
+                android:id="@+id/btn_checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serbia"
+                android:textSize="25sp"/>
+            <CheckBox
+                android:id="@+id/btn_checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Argentina"
+                android:textSize="25sp"/>
+
+            <CheckBox
+                android:id="@+id/btn_checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maldive"
+                android:textSize="25sp"/>
+            <CheckBox
+                android:id="@+id/btn_checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Norway"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:id="@+id/submit_answers_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:padding="5dp"
+            android:textSize="30sp"
+            android:layout_below="@+id/main_layout"/>
+
+    </RelativeLayout>
+</ScrollView>
