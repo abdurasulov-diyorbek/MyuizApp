@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Quiz"
+    android:id="@+id/scrollView"
+    android:fillViewport="true"
     android:background="@drawable/background5">
 
     <RelativeLayout
@@ -193,6 +195,7 @@
             android:layout_height="wrap_content"
             android:text="Submit"
             android:padding="5dp"
+            android:background="@drawable/try_again_button"
             android:textSize="30sp"
             android:layout_below="@+id/main_layout"/>
 

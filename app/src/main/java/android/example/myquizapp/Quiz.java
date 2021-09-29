@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 public class Quiz extends AppCompatActivity {
@@ -25,36 +26,36 @@ public class Quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        ScrollView view = findViewById(R.id.scrollView);
+        view.setSmoothScrollingEnabled(true);
+        view.fullScroll(View.FOCUS_DOWN);
 
         rightAnswers = 0;
         wrongAnswers = 0;
         nonSelectedQuestions = 0;
         radioGroup1 = findViewById(R.id.radioGroup1);
         radioGroup2 = findViewById(R.id.radioGroup2);
-        rb1 = findViewById(R.id.rb1);
-        rb2 = findViewById(R.id.rb2);
-        rb3 = findViewById(R.id.rb3);
-        rb4 = findViewById(R.id.rb4);
-        rb5 = findViewById(R.id.rb5);
-        rb6 = findViewById(R.id.rb6);
-        checkBox1 = findViewById(R.id.btn_checkBox1);
-        checkBox2 = findViewById(R.id.btn_checkBox2);
-        checkBox3 = findViewById(R.id.btn_checkBox3);
-        checkBox4 = findViewById(R.id.btn_checkBox4);
-        checkBox5 = findViewById(R.id.btn_checkBox5);
+        rb1 =(RadioButton) findViewById(R.id.rb1);
+        rb2 =(RadioButton) findViewById(R.id.rb2);
+        rb3 = (RadioButton)findViewById(R.id.rb3);
+        rb4 =(RadioButton) findViewById(R.id.rb4);
+        rb5 =(RadioButton) findViewById(R.id.rb5);
+        rb6 =(RadioButton) findViewById(R.id.rb6);
+        checkBox1 =(CheckBox) findViewById(R.id.btn_checkBox1);
+        checkBox2 =(CheckBox) findViewById(R.id.btn_checkBox2);
+        checkBox3 =(CheckBox) findViewById(R.id.btn_checkBox3);
+        checkBox4 =(CheckBox) findViewById(R.id.btn_checkBox4);
+        checkBox5 =(CheckBox) findViewById(R.id.btn_checkBox5);
 
-        editText = findViewById(R.id.fourthQuestion);
+        editText =(EditText) findViewById(R.id.fourthQuestion);
 
-        submitButton = findViewById(R.id.submit_answers_button);
+        submitButton =(Button) findViewById(R.id.submit_answers_button);
 
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkAnswers();
-                Intent intent = new Intent(Quiz.this, Results.class);
-                startActivity(intent);
-            }
+        submitButton.setOnClickListener(v -> {
+            checkAnswers();
+            Intent intent = new Intent(Quiz.this, Results.class);
+            startActivity(intent);
         });
 
     }

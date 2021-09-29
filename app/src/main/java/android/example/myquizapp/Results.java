@@ -33,13 +33,10 @@ public class Results extends AppCompatActivity {
         Quiz.wrongAnswers = 0;
         Quiz.nonSelectedQuestions = 0;
 
-        tryAgain = findViewById(R.id.try_again_button);
-        tryAgain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Results.this, MainActivity.class);
-                startActivity(intent);
-            }
+        tryAgain =(Button) findViewById(R.id.try_again_button);
+        tryAgain.setOnClickListener(v -> {
+            Intent intent = new Intent(Results.this, MainActivity.class);
+            startActivity(intent);
         });
 
 
