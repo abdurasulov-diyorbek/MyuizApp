@@ -27,18 +27,17 @@ public class Results extends AppCompatActivity {
 
         rightAnswers.setText("Right answers: " + Quiz.rightAnswers);
         wrongAnswers.setText("Wrong answers" + Quiz.wrongAnswers);
-        nonSelectedAnswers.setText("Non selected answers: "+ Quiz.nonSelectedQuestions);
+        nonSelectedAnswers.setText("Non selected answers: " + Quiz.nonSelectedQuestions);
 
         Quiz.rightAnswers = 0;
         Quiz.wrongAnswers = 0;
         Quiz.nonSelectedQuestions = 0;
 
-        tryAgain =(Button) findViewById(R.id.try_again_button);
+        tryAgain = (Button) findViewById(R.id.try_again_button);
         tryAgain.setOnClickListener(v -> {
             Intent intent = new Intent(Results.this, MainActivity.class);
             startActivity(intent);
         });
-
 
 
     }

@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">My Quiz App</string>
+    <string name="geography_questions">Geography questions</string>
+    <string name="_1_which_is_the_smallest_country_in_the_world">1. Which is the smallest country in the world?</string>
+    <string name="todo">TODO</string>
+    <string name="monaco">Monaco</string>
+    <string name="vatican">Vatican</string>
+    <string name="nauru">Nauru</string>
+    <string name="_2_what_is_the_capital_of_canada">2. What is the capital of Canada?</string>
+    <string name="ottawa">Ottawa</string>
+    <string name="montreal">Montreal</string>
+    <string name="toronto">Toronto</string>
+    <string name="_3_in_which_city_this_building_is_located">3. In which city this building is located?</string>
+    <string name="type_your_answer_here">Type your answer here....</string>
+    <string name="_4_please_select_countries_which_is_located_in_europe">4. Please select countries which is located in Europe.</string>
+    <string name="austria">Austria</string>
+    <string name="serbia">Serbia</string>
+    <string name="argentina">Argentina</string>
+    <string name="maldive">Maldive</string>
+    <string name="norway">Norway</string>
+    <string name="submit">Submit</string>
+    <string name="quiz_app">Quiz app</string>
+    <string name="start">Start</string>
+    <string name="results">Results</string>
+    <string name="try_again">Try again</string>
 </resources>
