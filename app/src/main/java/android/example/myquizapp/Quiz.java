@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class Quiz extends AppCompatActivity {
 
     RadioGroup radioGroup1, radioGroup2;
-    RadioButton rb1, rb2, rb3, rb4, rb5, rb6;
+    RadioButton radioButton1, radioButton2, radioButton3, radioButton4, radioButton5, radioButton6;
     public static int rightAnswers, wrongAnswers, nonSelectedQuestions;
     Button submitButton;
     EditText editText;
@@ -35,21 +35,21 @@ public class Quiz extends AppCompatActivity {
         nonSelectedQuestions = 0;
         radioGroup1 = findViewById(R.id.radioGroup1);
         radioGroup2 = findViewById(R.id.radioGroup2);
-        rb1 = (RadioButton) findViewById(R.id.rb1);
-        rb2 = (RadioButton) findViewById(R.id.rb2);
-        rb3 = (RadioButton) findViewById(R.id.rb3);
-        rb4 = (RadioButton) findViewById(R.id.rb4);
-        rb5 = (RadioButton) findViewById(R.id.rb5);
-        rb6 = (RadioButton) findViewById(R.id.rb6);
-        checkBox1 = (CheckBox) findViewById(R.id.btn_checkBox1);
-        checkBox2 = (CheckBox) findViewById(R.id.btn_checkBox2);
-        checkBox3 = (CheckBox) findViewById(R.id.btn_checkBox3);
-        checkBox4 = (CheckBox) findViewById(R.id.btn_checkBox4);
-        checkBox5 = (CheckBox) findViewById(R.id.btn_checkBox5);
+        radioButton1 = findViewById(R.id.rb1);
+        radioButton2 = findViewById(R.id.rb2);
+        radioButton3 = findViewById(R.id.rb3);
+        radioButton4 = findViewById(R.id.rb4);
+        radioButton5 = findViewById(R.id.rb5);
+        radioButton6 = findViewById(R.id.rb6);
+        checkBox1 = findViewById(R.id.btn_checkBox1);
+        checkBox2 = findViewById(R.id.btn_checkBox2);
+        checkBox3 = findViewById(R.id.btn_checkBox3);
+        checkBox4 = findViewById(R.id.btn_checkBox4);
+        checkBox5 = findViewById(R.id.btn_checkBox5);
 
-        editText = (EditText) findViewById(R.id.fourthQuestion);
+        editText = findViewById(R.id.fourthQuestion);
 
-        submitButton = (Button) findViewById(R.id.submit_answers_button);
+        submitButton = findViewById(R.id.submit_answers_button);
 
 
         submitButton.setOnClickListener(v -> {
@@ -64,7 +64,7 @@ public class Quiz extends AppCompatActivity {
         if (radioGroup1.getCheckedRadioButtonId() == -1) {
             nonSelectedQuestions++;
         } else {
-            if (rb2.isChecked()) {
+            if (radioButton2.isChecked()) {
                 rightAnswers++;
             } else {
                 wrongAnswers++;
@@ -74,7 +74,7 @@ public class Quiz extends AppCompatActivity {
         if (radioGroup2.getCheckedRadioButtonId() == -1) {
             nonSelectedQuestions++;
         } else {
-            if (rb4.isChecked()) {
+            if (radioButton4.isChecked()) {
                 rightAnswers++;
             } else {
                 wrongAnswers++;
@@ -85,7 +85,7 @@ public class Quiz extends AppCompatActivity {
         if (editText.getText().toString().matches("")) {
             nonSelectedQuestions++;
         } else {
-            if (editText.getText().toString().matches("London") || editText.getText().toString().matches("london")) {
+            if (editText.getText().toString().trim().equalsIgnoreCase("London") || editText.getText().toString().trim().equalsIgnoreCase("london")) {
                 rightAnswers++;
             } else {
                 wrongAnswers++;
@@ -93,7 +93,7 @@ public class Quiz extends AppCompatActivity {
         }
 
         if (checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked() || checkBox4.isChecked() || checkBox5.isChecked()) {
-            if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox5.isChecked()) {
+            if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox5.isChecked() && !checkBox3.isChecked() && !checkBox4.isChecked()) {
                 rightAnswers++;
             } else {
                 wrongAnswers++;
